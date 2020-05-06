@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>pull_test</title>
+    <script type="text/javascript" src="erizo.js"></script>
+    <script type="text/javascript" src="pull_test.js"></script>
+    <script type="text/javascript" src="common.js"></script>
+  </head>
+
+  <body>
+    <div>
+        <input id="svckey" type="text" name="svckey" value="5dbf9cd3334ccd197d9f9ad7">
+        <input id="svcid" type="text" name="svcid" value="512">
+        <input id="url" type="text" name="url" value="192.168.94.81:3000">
+        <input type="submit"  onclick="Init()" value="初始化服务器">
+    </div>
+    <div>
+        <button id="getRoomButton" onclick="getRoomListButton()" disabled>获取房间列表</button>
+    </div>
+    <div>
+        <input id="roomid" type="text" name="roomid">
+        <input  id="startPull" type="submit"  onclick="startPull()" value="开启拉流" >
+        
+        <input id="streamid" type="text" name="streamid">
+        <input  id="stopPull" type="submit"  onclick="stopPull()" value="停止拉流" >
+        <input  id="Record" type="submit"  onclick="Record()" value="开始录制" >
+    </div>
+    
+    <div>
+      <p>测试拉流相关功能</p>
+      <textarea id="messages" rows="15" cols="100"></textarea>
+    </div>
+    <div>
+      <p>本房间其他端视频</p>
+      <div id="videoContainer"></div>
+    </div>
+  </body>
+</html>

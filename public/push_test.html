@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>push_test</title>
+    <script type="text/javascript" src="erizo.js"></script>
+    <script type="text/javascript" src="push_test.js"></script>
+    <script type="text/javascript" src="common.js"></script>
+  </head>
+
+  <body>
+    <div>
+        <input id="svckey" type="text" name="svckey" value="5dbf9cd3334ccd197d9f9ad7">
+        <input id="svcid" type="text" name="svcid" value="512">
+        <input id="url" type="text" name="url" value="192.168.94.81:3000">
+        <input type="submit"  onclick="Init()" value="初始化服务器">
+    </div>
+    <div>
+        <button id="getRoomButton" onclick="getRoomListButton()" disabled>获取房间列表</button>
+    </div>
+    <div>
+        <input id="roomid" type="text" name="roomid">
+        <button id="pushlocalButton" onclick="pushlocal()" >推本地流</button><br>
+        <input id="recording" type="text" name="recording">
+        <button id="pushExternButton" onclick="pushExtern()">推文件流</button><br>
+        <button id="unpushlocalButton" onclick="unpushlocal()" >停止推流</button>
+
+    </div>
+    <div>
+      <p>测试licode推流相关功能</p>
+      <textarea id="messages" rows="15" cols="100"></textarea>
+    </div>
+    <div>
+      <p>本地视频</p>
+      <div id="my_local_video" style="width:320px; height: 240px;"></div>
+    </div>
+  </body>
+</html>
